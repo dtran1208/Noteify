@@ -12,16 +12,14 @@ window.addEventListener('beforeinstallprompt', (event) => {
 // Event handler for the click event on the install button
 butInstall.addEventListener('click', async () => {
   if (deferredPrompt) {
-    deferredPrompt.prompt(); // Show the installation prompt
-    const result = await deferredPrompt.userChoice; // Wait for the user's choice
+    deferredPrompt.prompt(); 
+    const result = await deferredPrompt.userChoice; 
     console.log('User choice:', result.outcome);
-    deferredPrompt = null; // Reset the deferred prompt variable
-    butInstall.style.display = 'none'; // Hide the install button
+    deferredPrompt = null; 
+    butInstall.style.display = 'none'; 
   }
 });
 
-// Event handler for the `appinstalled` event
 window.addEventListener('appinstalled', (event) => {
   console.log('App installed');
-  // Perform any additional actions after the app is installed
 });

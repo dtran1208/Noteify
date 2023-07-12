@@ -28,18 +28,15 @@ registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
 // TODO: Implement asset caching
 registerRoute(
-  // Define the route for your assets
   ({ request }) => request.destination === 'style' || request.destination === 'script' || request.destination === 'image',
-  // Use the appropriate strategy for caching assets (e.g., CacheFirst, StaleWhileRevalidate, etc.)
   new CacheFirst({
     cacheName: 'asset-cache',
     plugins: [
-      // Add any necessary plugins (e.g., CacheableResponsePlugin, ExpirationPlugin) for asset caching
       new CacheableResponsePlugin({
         statuses: [0, 200],
       }),
       new ExpirationPlugin({
-        maxAgeSeconds: 7 * 24 * 60 * 60, // Adjust the max age according to your needs
+        maxAgeSeconds: 7 * 24 * 60 * 60, 
       }),
     ],
   })
