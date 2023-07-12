@@ -26,13 +26,6 @@ npm install
 3. Use the text editor to create and save notes or code snippets.
 4. Install the application as a desktop app by clicking the "Install" button
 
-## Technologies Used
-- HTML, CSS, and JavaScript
-- IndexedDB
-- Workbox for service worker functionality
-- Webpack for module bundling
-- Heroku for deployment
-
 ## Contributing
 - Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
 
